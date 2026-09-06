@@ -40,7 +40,7 @@ public class Chrome_Url_Entity {
 	 * re-sync
 	 */
 	@Column(nullable = false, unique = true)
-	private Integer chromeurlid;
+	private Integer chromeUrlId;
 
 	@Column(nullable = false, length = 2048)
 	private String url;
