@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.chrome_history_dashboard.browser_history_entity.Browser_History_Entity;
@@ -47,5 +48,14 @@ public interface Browser_History_Repo extends JpaRepository<Browser_History_Enti
         Integer getMaxVisits();
         Double getAvgVisits();
     }
+    
+    @Query("SELECT bht.tag.tag_Name AS tagName, COUNT(bht) AS cnt FROM Browser_History_Tag_Entity bht " +
+    	       "WHERE bht.browserHistory.visitedAt BETWEEN :start AND :end GROUP BY bht.tag.tag_Name ORDER BY cnt DESC")
+    	List<TagCountInPeriod> findTagCountsInPeriod(@Param("start") LocalDateTime start, @Param("end") LocalDateTime end);
+
+    	interface TagCountInPeriod {
+    	    String getTagName();
+    	    Long getCnt();
+    	}
 
 }

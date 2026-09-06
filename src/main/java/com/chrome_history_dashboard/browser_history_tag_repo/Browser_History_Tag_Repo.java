@@ -1,5 +1,6 @@
 package com.chrome_history_dashboard.browser_history_tag_repo;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,5 +36,14 @@ public interface Browser_History_Tag_Repo extends JpaRepository<Browser_History_
         String getTagName();
         Long getVisitCount();
     }
+    
+    @Query("SELECT bht.tag.tag_Name AS tagName, COUNT(bht) AS cnt FROM Browser_History_Tag_Entity bht " +
+    	       "WHERE bht.browserHistory.visitedAt BETWEEN :start AND :end GROUP BY bht.tag.tag_Name ORDER BY cnt DESC")
+    	List<TagCountInPeriod> findTagCountsInPeriod(@Param("start") LocalDateTime start, @Param("end") LocalDateTime end);
+
+    	interface TagCountInPeriod {
+    	    String getTagName();
+    	    Long getCnt();
+    	}
 
 }

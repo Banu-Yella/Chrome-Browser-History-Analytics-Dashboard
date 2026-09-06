@@ -79,7 +79,7 @@ public class Chrome_History_Reader_Service {
 	                Chrome_Url_Entity entity = urlRepository.findByChromeUrlId(chromeId)
 	                        .orElseGet(Chrome_Url_Entity::new);
 
-	                entity.setChromeurlid(chromeId);
+	                entity.setChromeUrlId(chromeId);
 	                entity.setUrl(rawUrl);
 	                entity.setTitle(rs.getString("title"));
 	                entity.setVisitCount(rs.getInt("visit_count"));
