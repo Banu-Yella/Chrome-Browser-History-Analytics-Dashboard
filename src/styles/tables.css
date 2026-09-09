@@ -1,0 +1,74 @@
+/* Shared table geometry and pagination */
+.table-pagination {
+  background: #fff;
+}
+
+.table-page-size {
+  min-width: 76px;
+}
+
+.table th {
+  white-space: nowrap;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table-analytics {
+  min-width: 1650px;
+}
+
+.table-analytics th,
+.table-analytics td {
+  padding: .72rem .75rem;
+}
+
+.tag-record-table {
+  min-width: 1150px;
+}
+
+.tag-record-table th,
+.tag-record-table td {
+  padding: .78rem .85rem;
+}
+
+.tag-keywords {
+  white-space: normal;
+  min-width: 380px;
+  max-width: 650px;
+}
+
+.browser-history-table {
+  min-width: 950px;
+}
+
+.data-tabs {
+  scrollbar-width: thin;
+}
+
+.data-tabs .nav-link {
+  white-space: nowrap;
+  border: 0;
+  border-radius: .55rem .55rem 0 0;
+  margin-right: .2rem;
+  padding: .7rem .85rem;
+  color: #566273;
+}
+
+.data-tabs .nav-link:hover {
+  background: #f1f5f9;
+}
+
+.data-tabs .nav-link.active {
+  color: #1b2a4a;
+  font-weight: 700;
+}
+
+.data-tabs + .card-body {
+  min-height: 220px;
+}
+
+.history-filter {
+  width: 170px;
+}

@@ -1,0 +1,112 @@
+/* Shared workspace geometry and navigation polish */
+.app-page-wide {
+  width: 92%;
+  max-width: 1900px;
+}
+
+.table-scroll-shell {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.app-page .dashboard-card {
+  width: 100%;
+}
+
+.period-selector {
+  width: 100%;
+}
+
+.period-selector .card-body {
+  padding: 1rem 1.1rem;
+}
+
+.period-selector .row {
+  align-items: stretch !important;
+}
+
+.period-selector .form-label {
+  display: flex;
+  align-items: flex-end;
+  min-height: 24px;
+  font-weight: 650;
+  color: #334155;
+}
+
+.period-selector .form-control,
+.period-selector .form-select,
+.period-selector .resolved-range {
+  min-height: 40px;
+}
+
+.period-selector .form-text {
+  min-height: 34px;
+  margin-top: .35rem;
+}
+
+.period-selector .resolved-range {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: .55rem .8rem;
+  border: 1px solid #ced4da;
+  border-radius: .5rem;
+  background: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.period-selector .resolved-range strong,
+.period-selector .resolved-range span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-item-link {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-item-link:focus-visible,
+.burger-button:focus-visible,
+.nav-quick-link:focus-visible {
+  outline: 3px solid rgba(244, 185, 66, .45);
+  outline-offset: 2px;
+}
+
+.app-offcanvas {
+  width: min(330px, 88vw);
+}
+
+.app-main {
+  min-height: calc(100vh - 68px);
+}
+
+@media (max-width: 1199.98px) {
+  .app-page-wide {
+    width: 94%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .app-page,
+  .app-page-wide {
+    width: calc(100% - 1.25rem);
+    padding: 1rem 0;
+  }
+
+  .period-selector .card-body {
+    padding: .85rem;
+  }
+
+  .period-selector .form-text {
+    min-height: 0;
+  }
+
+  .app-offcanvas {
+    width: min(360px, 92vw);
+  }
+}

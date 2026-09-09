@@ -1,0 +1,42 @@
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#1f2937;background:#f7f8fa;font-synthesis:none;text-rendering:optimizeLegibility}body{margin:0;min-width:320px;background:#f7f8fa}a{color:#1b2a4a}.app-navbar{min-height:68px;background:#1b2a4a;color:#fff;position:sticky;top:0;z-index:1035}.navbar-brand-wrap{display:flex;flex-direction:column;line-height:1.05}.navbar-brand{color:#fff!important;font-weight:700}.brand-subtitle{color:rgba(255,255,255,.64);font-size:.72rem;margin-top:.25rem}.burger-button{color:#fff;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);width:42px;height:42px;font-size:1.2rem}.burger-button:hover,.burger-button:focus{color:#fff;background:rgba(255,255,255,.14)}.nav-quick-link{color:#fff;border-color:rgba(255,255,255,.35)}.nav-quick-link:hover{color:#1b2a4a;background:#fff}.nav-quick-primary{color:#1b2a4a;background:#f4b942;border-color:#f4b942;font-weight:700}.nav-quick-primary:hover{background:#ffd166;color:#1b2a4a}.app-offcanvas{width:min(330px,88vw)}.nav-section{display:grid;gap:.5rem}.nav-item-link{display:flex;align-items:center;gap:.75rem;border:1px solid #dee2e6;border-radius:.75rem;padding:.75rem .9rem;text-decoration:none;color:#1f2937;background:#fff;transition:.15s ease}.nav-item-link:hover{background:#f5f7fb;border-color:#bcc6d4}.nav-item-link.active{background:#1b2a4a;border-color:#1b2a4a;color:#fff}.nav-item-icon{width:1.25rem;text-align:center}.offcanvas-note{border:1px dashed #ced4da;border-radius:.75rem;padding:.9rem;background:#f8f9fa}.app-main{min-height:calc(100vh - 68px)}.app-page{padding:1.5rem;max-width:1500px;margin:0 auto}.eyebrow{font-size:.72rem;letter-spacing:.12em;font-weight:800;color:#718096;margin-bottom:.45rem}.page-heading h1{color:#1b2a4a}.home-hero{background:linear-gradient(135deg,#fff,#edf3fa);border:1px solid #dde4ed;border-radius:1rem}.home-quick-panel{border:1px solid #dbe3ec;background:rgba(255,255,255,.82);border-radius:.9rem;padding:1rem}.app-link-card{color:inherit;transition:transform .15s ease,box-shadow .15s ease}.app-link-card:hover{transform:translateY(-2px);box-shadow:0 .5rem 1.5rem rgba(27,42,74,.08)}.app-link-card .small{color:#1b2a4a}.period-selector{box-shadow:0 2px 8px rgba(27,42,74,.04);border:1px solid #dde4ed!important}.resolved-range{min-height:38px;display:flex;align-items:center;padding:.55rem .8rem;border:1px solid #ced4da;border-radius:.375rem;background:#fff;font-size:.9rem}.progress-panel{border:1px solid #dce4ee!important}.metric-card,.snapshot-tile{height:100%;border:1px solid #dce4ee;border-radius:.85rem;padding:1rem;background:#fff}.metric-value{font-size:1.35rem;font-weight:750;color:#1b2a4a;margin-top:.35rem}.snapshot-tile{display:flex;flex-direction:column;gap:.35rem}.snapshot-tile span{font-size:.78rem;color:#6b7280}.snapshot-tile strong{color:#1b2a4a}.dashboard-card{border:1px solid #dce4ee;border-radius:.9rem;box-shadow:0 2px 8px rgba(27,42,74,.035);overflow:hidden}.dashboard-card .card-header{background:#fff;color:#1b2a4a;font-weight:700;border-bottom:1px solid #e8edf3}.history-filter{width:170px}.history-tag-select{max-width:280px}.tag-remove{border:0;background:transparent;line-height:1}.table-analytics th{white-space:nowrap;font-size:.78rem}.table-analytics td{white-space:nowrap;font-size:.82rem}@media(max-width:767.98px){.app-page{padding:1rem}.nav-quick-link{display:none}.brand-subtitle{display:none}}
+.data-tabs .nav-link{white-space:nowrap;color:#566273}.data-tabs .nav-link.active{color:#1b2a4a;font-weight:700}.data-tabs{border-bottom:0}.table th{white-space:nowrap}.table td{vertical-align:middle}.data-tabs+.card-body{min-height:220px}
+
+/* Navigation interaction and chart layout refinements */
+.nav-item-link {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-item-link:focus-visible,
+.burger-button:focus-visible,
+.nav-quick-link:focus-visible {
+  outline: 3px solid rgba(244, 185, 66, .45);
+  outline-offset: 2px;
+}
+
+.dashboard-card .card-body {
+  min-height: 360px;
+}
+
+.chart-card-body {
+  position: relative;
+  min-height: 360px;
+}
+
+@media (max-width: 767.98px) {
+  .app-navbar .container-fluid {
+    min-height: 64px;
+  }
+
+  .burger-button {
+    width: 40px;
+    height: 40px;
+    margin-right: .7rem !important;
+  }
+
+  .app-offcanvas {
+    width: min(360px, 92vw);
+  }
+}
